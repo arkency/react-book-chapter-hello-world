@@ -1,7 +1,10 @@
 class HelloWorld extends React.Component {
   render() {
     return (
-      <h1>Hello World!</h1>
+      <div id="two-tags">
+        <h1>Hello World!</h1>
+        <a href="#" id="click">Click me</a>
+      </div>
     );
   }
 }
