@@ -1,4 +1,4 @@
-class HelloWorld extends React.Component {
+class OneTimeClickLink extends React.Component {
   constructor(props) {
     super(props);
     this.state = {clicked: false};
@@ -11,24 +11,35 @@ class HelloWorld extends React.Component {
 
   render() {
     if (this.state.clicked === false) {
-      return (
-        <div id="two-tags">
-          <h1>Hello {this.props.name}!</h1>
-          <a href="#" id="click" onClick={this.linkClicked}>Click me</a>
-        </div>
-      );
+      return (<a href="#" id="click" onClick={this.linkClicked}>Click me</a>);
     } else {
-      return (
-        <div id="two-tags">
-          <h1>Hello {this.props.name}!</h1>
-          <span>You clicked the link</span>
-        </div>
-      );
+      return (<span>You clicked the link</span>);
     }
   }
 }
 
+class HelloWorld extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (<h1>Hello {this.props.name}!</h1>);
+  }
+}
+
+class HelloWorldApp extends React.Component {
+  render() {
+    return (
+      <div id="two-tags">
+        <HelloWorld name="Peter" />
+        <OneTimeClickLink />
+      </div>
+    );
+  }
+}
+
 React.render(
-  <HelloWorld name="Peter" />,
+  <HelloWorldApp />,
   document.getElementById("greeting")
 );
