@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.development.js",
     "watch": "webpack --config webpack.development.js --watch",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server --config webpack.development.js"
   },
   "author": "",
   "license": "ISC",
