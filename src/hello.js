@@ -1,3 +1,7 @@
+import React from "react";
+
+import ReactDOM from 'react-dom';
+
 class OneTimeClickLink extends React.Component {
   constructor(props) {
     super(props);
@@ -39,7 +43,7 @@ class HelloWorldApp extends React.Component {
   }
 }
 
-React.render(
+ReactDOM.render(
   <HelloWorldApp />,
   document.getElementById("greeting")
 );
